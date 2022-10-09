@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/style.css">
+    <script defer src="/index.js"></script>
+    <title>StudyTime</title>
+</head>
+
+<body>
+    <main>
+        <div class="wrapper">
+            <h1 class="title">StudyTime</h1>
+            <div class="button-wrapper">
+
+                <!-- Botão SVG -->
+
+                <svg class="arrow hours-up" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path class="increase-hours" stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
+                </svg>
+
+                <svg class="arrow minutes-up" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
+                </svg>
+
+                <svg class="arrow seconds-up" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
+                </svg>
+
+            </div>
+            <div class="clock-wrapper">
+
+                <p class="clock">
+                    <span class="hours">00</span>:<span class="minutes">00</span>:<span class="seconds">00</span>
+                </p>
+
+            </div>
+            <div class="button-wrapper">
+
+                <!-- Botão SVG -->
+
+                <svg class="arrow hours-down" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                </svg>
+
+                <svg class="arrow minutes-down" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                </svg>
+
+                <svg class="arrow seconds-down" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                </svg>
+            </div>
+            <button class="start-button">COMEÇAR</button>
+            <input name="music-type" type="radio" id="lofi" value="lofi">
+            <label for="lofi">Lofi</label>
+            <input name="music-type" type="radio" id="jazz" value="jazz">
+            <label for="lofi">Jazz</label>
+            <input name="music-type" type="radio" id="no-music" value="no-music">
+            <label for="lofi">Sem Música</label>
+        </div>
+    </main>
+</body>
+
+</html>

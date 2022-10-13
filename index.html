@@ -37,7 +37,7 @@
             <div class="clock-wrapper">
 
                 <p class="clock">
-                    <span class="hours">00</span>:<span class="minutes">00</span>:<span class="seconds">00</span>
+                    <span class="hours">00</span>:<span class="minutes">30</span>:<span class="seconds">00</span>
                 </p>
 
             </div>
@@ -60,7 +60,10 @@
                     <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
                 </svg>
             </div>
-            <button class="start-button">COMEÇAR</button>
+            <div class="button-wrapper">
+            <button onclick="startTimer()" class="start-button button-default">COMEÇAR</button>
+            <button class="stop-button button-default">PARAR</button>
+            <button class="reset-button button-default">RESET</button></div>
             <input name="music-type" type="radio" id="lofi" value="lofi">
             <label for="lofi">Lofi</label>
             <input name="music-type" type="radio" id="jazz" value="jazz">

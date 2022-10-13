@@ -83,7 +83,7 @@ function stopTimer(){
 function resetTimer(){
     clearInterval(interval);
     timerHours.innerHTML = "00";
-    timerMinutes.innerHTML = "30";
+    timerMinutes.innerHTML = "25";
     timerSeconds.innerHTML = "00";
 }
 

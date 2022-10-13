@@ -13,22 +13,23 @@
 <body>
     <main>
         <div class="wrapper">
-            <h1 class="title">StudyTime</h1>
+            <h1 class="title">Study<span class="color">Time</span></h1>
             <div class="button-wrapper">
 
                 <!-- Botão SVG -->
 
-                <svg class="arrow hours-up" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                <svg class="arrow-up hours-up" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                     stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                    <path class="increase-hours" stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
+                    <path class="increase-hours" stroke-linecap="round" stroke-linejoin="round"
+                        d="M4.5 15.75l7.5-7.5 7.5 7.5" />
                 </svg>
 
-                <svg class="arrow minutes-up" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                <svg class="arrow-up minutes-up" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                     stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
                 </svg>
 
-                <svg class="arrow seconds-up" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                <svg class="arrow-up seconds-up" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                     stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
                 </svg>
@@ -45,31 +46,31 @@
 
                 <!-- Botão SVG -->
 
-                <svg class="arrow hours-down" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                    stroke="currentColor" class="w-6 h-6">
+                <svg class="arrow-down hours-down" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
                 </svg>
 
-                <svg class="arrow minutes-down" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                    stroke="currentColor" class="w-6 h-6">
+                <svg class="arrow-down minutes-down" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
                 </svg>
 
-                <svg class="arrow seconds-down" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                    stroke="currentColor" class="w-6 h-6">
+                <svg class="arrow-down seconds-down" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
                 </svg>
             </div>
-            <div class="button-wrapper">
-            <button onclick="startTimer()" class="start-button button-default">COMEÇAR</button>
-            <button class="stop-button button-default">PARAR</button>
-            <button class="reset-button button-default">RESET</button></div>
-            <input name="music-type" type="radio" id="lofi" value="lofi">
+            <div class="buttons-wrapper">
+                <button onclick="startTimer()" class="start-button button-default">Start</button>
+                <button onclick="stopTimer()" class="stop-button button-default">Stop</button>
+                <button onclick="resetTimer()" class="reset-button button-default">Reset</button></div>
+            <!-- <input name="music-type" type="radio" id="lofi" value="lofi">
             <label for="lofi">Lofi</label>
             <input name="music-type" type="radio" id="jazz" value="jazz">
             <label for="lofi">Jazz</label>
             <input name="music-type" type="radio" id="no-music" value="no-music">
-            <label for="lofi">Sem Música</label>
+            <label for="lofi">Sem Música</label> -->
         </div>
     </main>
 </body>

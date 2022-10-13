@@ -2,17 +2,19 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
-:root{
+:root {
     --gap: 205px
 }
-*{
+
+* {
     padding: 0;
     margin: 0;
     border: none;
     box-sizing: border-box;
 }
 
-.clock::selection, span::selection{
+.clock::selection,
+span::selection {
     background: transparent;
     user-select: none;
     -webkit-user-select: none;
@@ -20,16 +22,39 @@
     -ms-user-select: none;
 }
 
-body{
+h1 {
+    margin-bottom: 30px;
+}
+
+body {
     font-family: 'Josefin Sans', sans-serif;
     color: white;
 }
 
-.arrow{
+.color {
+    color: rgb(93 24 220);
+}
+
+.arrow-up, .arrow-down {
     width: 80px;
     height: auto;
     cursor: pointer;
 }
+
+.arrow-up:hover, .arrow-down:hover{
+    color: rgb(93 24 220);
+    
+}
+
+.arrow-up:active{
+   color: rgb(51, 10, 127);
+   translate: 0 -5px;
+}
+
+.arrow-down:active{
+    translate: 0 5px;
+}
+
 
 main .wrapper {
     height: 100vh;
@@ -39,21 +64,59 @@ main .wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
 }
 
-main .wrapper .button-wrapper{
+main .wrapper .button-wrapper {
     display: flex;
+    justify-content: center;
     gap: var(--gap);
-    
+
 }
 
-main .wrapper .clock-wrapper .clock{
+main .wrapper .clock-wrapper .clock {
     font-size: 200px;
     text-align: center;
     line-height: 1;
 }
 
-.button-default{
+main .wrapper .buttons-wrapper {
+    display: flex;
+    margin: auto;
+    gap: 40px;
+}
+
+.button-default {
     padding: 10px 30px;
     margin: 30px 0;
+}
+
+.button-default {
+    text-align: center;
+    padding: 17px 30px;
+    border-radius: 15px;
+    border: 0;
+    background-color: white;
+    box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-size: 15px;
+    transition: all .5s ease;
+}
+
+.button-default:hover {
+    background-color: hsl(261deg 80% 48%);
+    color: hsl(0, 0%, 100%);
+    box-shadow: rgb(93 24 220) 0px 7px 29px 0px;
+    cursor: pointer;
+    ;
+}
+
+.button-default:active {
+    letter-spacing: 3px;
+    background-color: hsl(261deg 80% 48%);
+    color: hsl(0, 0%, 100%);
+    box-shadow: rgb(93 24 220) 0px 0px 0px 0px;
+    transform: translateY(10px);
+    transition: 100ms;
 }

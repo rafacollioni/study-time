@@ -50,51 +50,48 @@ function settingTimer(e) {
 
 }
 
+let interval;
+
 function startTimer() {
+
     const intervalSeconds = 1000;
-    const intervalMinutes = intervalSeconds * 62;
-    const intervalHours = intervalMinutes * 60;
-
+    clearInterval(interval)
     // Função dos Segundos
-
-    if (timerHours.innerHTML == "00" && timerMinutes.innerHTML == "00" && timerSeconds.innerHTML == "00") {
-        return "erro"
-    } else {
-        setInterval(function () {
+    interval = setInterval(function () {
+        if (timerHours.innerHTML == 00 && timerMinutes.innerHTML == 00 && timerSeconds.innerHTML == 00) {
+            clearInterval(interval);
+            alert("Fim do Tempo")}else{
             timerSeconds.innerHTML--;
             addZeros(timerSeconds)
             if (timerSeconds.innerHTML == "0-1") {
-                timerSeconds.innerHTML = "60"
+                timerSeconds.innerHTML = "59"
                 timerMinutes.innerHTML--
+                addZeros(timerMinutes);
             }
             if (timerMinutes.innerHTML == "-1"){
                 timerMinutes.innerHTML = "59"
                 addZeros(timerHours);
                 timerHours.innerHTML--
-            }
-        }, intervalSeconds);
+            }}
+        }, intervalSeconds);}
+        
 
-    // setInterval(function () {
-    //         addZeros(timerMinutes);
-    //             if(timerMinutes.innerText == "-1") {
-    //                 timerMinutes.innerHTML = "60";
-    //                 timerHours--
-    //             }
-
-
-
-    // }, intervalMinutes)
-    
-    
-
-
-
-
-
-
-    }
-
+function stopTimer(){
+    clearInterval(interval);
 }
+
+function resetTimer(){
+    clearInterval(interval);
+    timerHours.innerHTML = "00";
+    timerMinutes.innerHTML = "30";
+    timerSeconds.innerHTML = "00";
+}
+
+
+
+
+
+
 
 
 function addZeros(element) {

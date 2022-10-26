@@ -123,6 +123,17 @@ span::selection {
     translate: 0 5px;
 }
 
+.disabled, .disabled:hover{
+    color: #5555;
+    cursor: not-allowed;
+    filter: none;
+
+}
+
+
+
+
+
 @media screen 
   and (min-width: 360px) 
   and (max-width: 640px){

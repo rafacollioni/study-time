@@ -2,6 +2,7 @@ const timerHours = document.querySelector('.hours'),
     timerMinutes = document.querySelector('.minutes'),
     timerSeconds = document.querySelector('.seconds');
 
+
 // Usuário Configurando o Timer
 
 document.addEventListener('click', function (e) {
@@ -50,49 +51,71 @@ function settingTimer(e) {
 
 }
 
+
 let interval;
+
+let finishSound = new Audio("./assets/clock-alarm.mp3");
+
 
 function startTimer() {
 
     const intervalSeconds = 1000;
+
     clearInterval(interval)
+
     // Função dos Segundos
+
     interval = setInterval(function () {
+        
         if (timerHours.innerHTML == 00 && timerMinutes.innerHTML == 00 && timerSeconds.innerHTML == 00) {
+
             clearInterval(interval);
-            alert("Fim do Tempo")}else{
+
+            finishSound.play();
+
+        }else{
             timerSeconds.innerHTML--;
+
             addZeros(timerSeconds)
+
             if (timerSeconds.innerHTML == "0-1") {
+
                 timerSeconds.innerHTML = "59"
+
                 timerMinutes.innerHTML--
+
                 addZeros(timerMinutes);
             }
             if (timerMinutes.innerHTML == "-1"){
+
                 timerMinutes.innerHTML = "59"
+
                 addZeros(timerHours);
+
                 timerHours.innerHTML--
             }}
         }, intervalSeconds);}
         
 
 function stopTimer(){
+
     clearInterval(interval);
+
+    finishSound.pause();
 }
 
 function resetTimer(){
+
     clearInterval(interval);
+
     timerHours.innerHTML = "00";
+
     timerMinutes.innerHTML = "25";
+
     timerSeconds.innerHTML = "00";
+
+    finishSound.pause();
 }
-
-
-
-
-
-
-
 
 function addZeros(element) {
 
